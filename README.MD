@@ -9,19 +9,19 @@ to run own script. In this scenario we avoid a lot of boilerplate code and reuse
 ## Scripts
 **_package-one_** and **_package-two_** are standalone React projects. They can be stared by executing start command:
 ```
-    yarn start;
+yarn start;
 ```
 
 ### Linting
 Execute next command maintain the code quality:
 ```
-    yarn lint;
+yarn lint;
 ```
 
 ### Testing
 Execute next to run all tests for a selected project:
 ```
-    yarn test;
+yarn test;
 ```
 
 ## Links
