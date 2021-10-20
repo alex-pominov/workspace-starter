@@ -1,0 +1,62 @@
+{
+  "name": "@workspace-starter/common",
+  "private": true,
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "lint-exec": "eslint --config .eslintrc.js",
+    "lint": "yarn run lint-exec \"src/**/*.js\"",
+    "jest-config": "yarn config set jest-config config/test/jest.config.js",
+    "test": "yarn run jest-config && jest --rootDir=./"
+  },
+  "peerDependencies": {
+    "prettier": ">=^2.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@svgr/webpack": "^5.5.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.4.0",
+    "dotenv": "^10.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.4.0",
+    "husky": "^7.0.2",
+    "jest": "^26.6.3",
+    "jest-enzyme": "^7.1.2",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint",
+      "pretty-quick — staged",
+      "git add"
+    ]
+  }
+}
